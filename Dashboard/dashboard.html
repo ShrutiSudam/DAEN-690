@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home:Team Meraki</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 678px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 205%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+	<li><a href="dashboard_tab.html"><span class="glyphicon glyphicon-log-in"></span> Dashboard</a></li>
+        <li><a href="Prioritized_user_list.html">Prioritized Users List </a></li>
+        <li><a href="Prioritized_location_list.html">Prioritized Locations List</a></li>
+        <li><a href="Users_with_errors_in_more_than_one_module.html">Users with Errors in more than One Module</a></li>
+        <li><a href="loc_wise_user_list.html">Location-wise Users List </a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="https://www.accenture.com/us-en/industries/afs-index?c=psv_us_accenturefedera_10490752&n=psgs_brand_0119&gclid=CjwKCAjw07qDBhBxEiwA6pPbHomDL57dbidHm3yqiFW7yJkGNwgjskIaRKwWtZF5wQ63k1CibApoiRoC1p0QAvD_BwE&gclsrc=aw.ds">Accenture Federal Services</a></p>
+      <p><a href="https://catalog.gmu.edu/search/?P=DAEN%20690">DAEN690</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h2>Accurate User Database Training Resource Optimization</h2>
+      <p>Domain of problem: Supply Chain Management, Human Resource Management, Training and Development</p>
+      <hr>
+      <h3>Problem Statement:</h3>
+      <p>Accenture Federal Services maintains a system for one of their federal clients which track the procurement, distribution, maintenance, and retirement of their assets. Users of this system need to be trained based on their roles and tasks to ensure the system is being used properly. At present, the training need is being identified manually and not analytically driven and proving to be inadequate. There is a need to build a model that can prioritize which users need training and the type of training they need so that scarce training resources are used optimally. </p>
+    <h3>Importance of problem:</h3>
+      <p>Users without sufficient training on the system are more prone to make errors than the trained ones. These errors have an adverse impact on the business as they result in losses in the form of time and money. </p>
+<h3>Summary:</h3>
+<ul>
+<li>User 63, 53, 279, 270, 72 are the top 5 users with the highest weighted score indicating that they have the most adverse impact on the system and need the training the most urgently. </li>
+<li>There are 67 users committing errors in more than 1 module and need special focus. </li>
+<li>Location 101 has the highest aggregated weighted score of 10.95 with 18 users committing errors which warrant further investigation at this location. </li>
+<li>Also, the second location 141 has 21 users performing erroneous transactions which also calls for further exploration.</li>
+<li>Module-wise Total Users and Users with Errors show that ~95% of total users of the disposal module perform erroneous transactions. This is largely due to incorrect entries related to retirement dates and manual or missing document scan type.</li>
+<li>The transferring module also has a significantly high error rate of >85%. </li>
+<li>Implementation of the data-driven solution is expected to reduce error rates gradually over some time. </li>
+</ul>
+<br>
+<img src="summary_table.png" width="360" height="120" alt="Summary table">
+
+<br>
+<br>
+<h4>Module-wise Total and Erroneous Users Count list</h4>
+					<img src="total_error_user_list.png" width="360" height="120" alt="Module-wise Total and Erroneous Users Count list">
+<br>
+<br>
+					<h4>Module-wise Total and Erroneous Users Count plot</h4>
+					<img src="total_error_user_plot.png" width="360" height="400" alt="Module-wise Total and Erroneous Users Count plot">
+    </div>
+    <div class="col-sm-2 sidenav">
+     
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Developed by: Sangram, Albert, Chaitanya, Meghana, Shruti, Prem for Data Analytics Engineering 690 under guidance of Prof. Bernard Schmidt</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  button{
+  border: 2px solid #555;
+  background: white;
+  color: black;
+  border-radius: 12px;
+  padding: 10px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  width:100%;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.button1{
+  color: #555;
+}
+
+.button1:hover{
+color: white;
+background: #555;
+}
+
+ 
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="dashboard.html">Home</a></li>
+	<li class="active"><a href="dashboard_tab.html"><span class="glyphicon glyphicon-log-in"></span> Dashboard</a></li>
+        <li><a href="Prioritized_user_list.html">Prioritized Users List </a></li>
+        <li><a href="Prioritized_location_list.html">Prioritized Locations List</a></li>
+        <li><a href="Users_with_errors_in_more_than_one_module.html">Users with Errors in more than One Module</a></li>
+        <li><a href="loc_wise_user_list.html">Location-wise Users List </a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <center> <h2>DASHBOARD</h2></center><br>
+<div class="container text-center">    
+
+
+	
+					
+ 
+  <li><a href="Prioritized_user_list.html"><button type="button" class="button button1" value="Input Button"><h4>Prioritized User List</h4></button></a></li>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="top_users_list.png" width="945" height="580" alt="user list">
+      <p>Prioritized User List</p>
+    </div>
+    <div class="col-sm-12"> 
+      <img src="top_users_plot.png" width="400" height="640" alt="top users plot">
+      <p>Plot for prioritized User List</p>    
+    </div>
+  
+  </div>
+
+</div><br>
+
+<div class="container text-center">    
+
+
+					
+ 
+  <li><a href="Prioritized_location_list.html"><button type="button" class="button button1" value="Input Button"><h4>Prioritized Locations List</h4></button></a></li>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="loc_list.png" width="450" height="580" alt="location list">
+      <p>Prioritized location list</p>
+    </div>
+    <div class="col-sm-6"> 
+      <img src="top_locations_plot.png" width="450" height="640" alt="top location plot">
+      <p>Plot for prioritized location list </p>    
+    </div>
+  
+  </div>
+
+</div><br>
+
+<div class="container text-center">    
+
+
+					
+ 
+  <li><a href="Users_with_errors_in_more_than_one_module.html"><button type="button" class="button button1" value="Input Button"><h4>Users with Errors in more than One Module</h4></button></a></li>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="user_module_list.png" width="945" height="580" alt="user module list">
+      <p>List for Users with errors in more than one module</p>
+    </div>
+    <div class="col-sm-12"> 
+      <img src="top_users_module_plot.png" width="400" height="640" alt="top user module plot">
+      <p>Plot for users with errors in more than one module</p>    
+    </div>
+  
+  </div>
+
+</div><br>
+
+<div class="container text-center">    			
+ 
+  <li><a href="loc_wise_user_list.html"><button type="button" class="button button1" value="Input Button"><h4>Location-wise Users List</h4></button></a></li>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="loc_user_list.png" width="300" height="580" alt="location-wise user list">
+      <p>Location-wise user list</p>
+    </div>
+   
+  
+  </div>
+
+</div><br>
+
+<div class="container text-center">    					
+ 
+  <button type="button" class="button button1" value="Input Button"><h4>Module-wise Total & Erroneous Users</h4></button>
+  <div class="row">
+    <div class="col-sm-12">
+      <img src="total_error_user_list.png" width="360" height="120" alt="Module-wise Total and Erroneous Users Count list">
+      <p>Module-wise Total & Erroneous users list</p>
+    </div>
+    <div class="col-sm-12"> 
+      <img src="total_error_user_plot.png" width="360" height="400" alt="Module-wise Total and Erroneous Users Count plot">
+      <p>Module-wise Total & Erroneous users plot</p>    
+    </div>
+  
+  </div>
+
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Developed by: Sangram, Albert, Chaitanya, Meghana, Shruti, Prem for Data Analytics Engineering 690 under guidance of Prof. Bernard Schmidt</p>
+</footer>
+
+</body>
+</html>

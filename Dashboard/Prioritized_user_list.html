@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prioritized Users List</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<style>
+			/* Remove the navbar's default margin-bottom and rounded borders */ 
+			.navbar {
+				margin-bottom: 0;
+				border-radius: 0;
+			}
+			.left {
+				float: left;
+				width: 50%;
+			}
+			.right {
+				float: right;
+				width: 50%;
+			}
+			/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+			.row.content {height: 678px}
+			
+			/* Set gray background color and 100% height */
+			.sidenav {
+				padding-top: 20px;
+				background-color: #f1f1f1;
+				height: 300%;
+			}
+			
+			/* Set black background color, white text and some padding */
+			footer {
+				background-color: #555;
+				color: white;
+				padding: 15px;
+			}
+			
+			/* On small screens, set height to 'auto' for sidenav and grid */
+			@media screen and (max-width: 767px) {
+				.sidenav {
+					height: auto;
+					padding: 15px;
+				}
+				.row.content {height:auto;} 
+			}
+		</style>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="dashboard.html">Home</a></li>
+						<li><a href="dashboard_tab.html"><span class="glyphicon glyphicon-log-in"></span> Dashboard</a></li>
+						<li class="active"><a href="Prioritized_user_list.html">Prioritized Users List</a></li>
+						<li><a href="Prioritized_location_list.html">Prioritized Locations List</a></li>
+						<li><a href="Users_with_errors_in_more_than_one_module.html">Users with Errors in more than One Module</a></li>
+						<li><a href="loc_wise_user_list.html">Location-wise Users List </a></li>
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid text-center">    
+			<div class="row content">
+				<div class="col-sm-2 sidenav">
+					<p><a href="https://www.accenture.com/us-en/industries/afs-index?c=psv_us_accenturefedera_10490752&n=psgs_brand_0119&gclid=CjwKCAjw07qDBhBxEiwA6pPbHomDL57dbidHm3yqiFW7yJkGNwgjskIaRKwWtZF5wQ63k1CibApoiRoC1p0QAvD_BwE&gclsrc=aw.ds">Accenture Federal Services</a></p>
+					<p><a href="https://catalog.gmu.edu/search/?P=DAEN%20690">DAEN690</a></p>
+				</div>
+
+				<div class="col-sm-8 text-left"> 
+					<h2>Prioritized User List</h2>
+					<p></p>
+					<hr>
+					
+					<p>Prioritized Users list provides information about which users need training on priority and the area in which they need training. This is the list of all users making erroneous transactions, sorted based on their weighted score. The weighted score indicates the amount of adverse impact a user can have on the system; the higher the weighted score, the more the adverse impact the user has on the system. The columns from REC_CREATION to MORE_1_MODULE help to show the area in which a user is making an error in turn the area in which he/she needs training. Value of 1 or 0.5 indicates errors in those transactions and 0 indicates correct transactions.</p>
+<br>
+<h4>Column names and description:</h4>
+<ul>
+<li>USER_ID: ID of the user making erroneous transactions.</li>
+<li>WEIGHTED_SCORE: Weighted score of a user.</li>
+<li>REC_CREATION: how an asset was received into the system - 0 indicates purchase request through the system, 1 indicates manual entry.   
+REC_CLASS: FAP classification – 0 indicates correct classification, 1 indicates incorrect classification.</li>
+<li>LOC_DOC: Location movement document – 0 indicates valid system entry, 1 indicates invalid entry.</li>
+<li>DISP_DOC: Disposal document – 0 indicates valid document present, 1 indicates it is absent.</li>
+<li>DISP_RET_YR: Disposal retirement year – 0 indicates correct entry, 1 indicates incorrect entry.</li>
+<li>DISP_SCAN_MIS: Scan type while disposing an asset – 0 indicates scanned, 1 indicates missing.</li>
+<li>DISP_SCAN_MAN: Scan type while disposing an asset – 0 indicates scanned, 0.5 indicates manual.</li>
+<li>MORE_1_MODULE: Error in more than one module – 0 indicates no, 1 indicates yes.</li>
+</ul>
+
+
+					
+<br>					
+					
+					<h4>List showing prioritized users</h4>
+					<img src="top_users_list.png" width="945" height="580" alt="user list">
+<br>
+<br>
+					<h4>Bar chart for top 20 users</h4>
+					<img src="top_users_plot.png" width="400" height="640" alt="top users plot">
+					
+					
+				</div>
+				
+				<div class="col-sm-2 sidenav">
+					
+				</div>
+			</div>
+		</div>
+		
+		<footer class="container-fluid text-center">
+			<p>
+				Developed by: Sangram, Albert, Chaitanya, Meghana, Shruti, Prem for Data Analytics Engineering 690 under guidance of Prof. Bernard Schmidt
+		
+			</p>
+		</footer>
+
+	</body>
+</html>
